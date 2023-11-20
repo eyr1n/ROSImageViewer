@@ -13,6 +13,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import jp.eyrin.rosimageviewer.ui.theme.ROSImageViewerTheme
 
 class MainActivity : ComponentActivity() {
+    companion object {
+        init {
+            System.loadLibrary("rosimageviewer")
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
