@@ -10,7 +10,5 @@ add_library(${PROJECT_NAME} SHARED
         rclmodoki.cpp
         rosimageviewer.cpp)
 target_link_libraries(${PROJECT_NAME}
-        android
-        log
         rclmodoki::rclmodoki
         msg)
