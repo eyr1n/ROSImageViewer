@@ -42,7 +42,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onResume() {
         super.onResume()
-        node = Node(3)
+        node = Node(domainId = 3)
         objectDetectorSub = node.createSubscription("/object_detector/image/compressed", QoS(10)) {
             objectDetectorImage.value = BitmapFactory.decodeByteArray(it.data, 0, it.data.size)
         }
